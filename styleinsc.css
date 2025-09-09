@@ -1,0 +1,86 @@
+body{
+    margin: 0px;
+
+}
+h1{
+    background-color: lightblue;
+    margin: 0px;
+    padding: 30px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#apresentacao{
+    padding-left: 30px;
+}
+#serie{
+    
+}
+/* Adicione ao seu CSS */
+#container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+#nome{
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tel{
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.serie{
+    display: none;
+}
+#nomepartipantes{
+    display: none;
+}
+#musica{
+    display: none;
+}
+#musicaInput{
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#outro{
+    display: none;
+}
+#outroInput{
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#enviar{
+    margin-top: 20px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}

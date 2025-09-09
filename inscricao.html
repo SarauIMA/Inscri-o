@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleinsc.css">
+    <title>Inscrição</title>
+</head>
+<body>
+    <h1>Inscrição</h1>
+    <div id="Form">
+        <form action="" method="post">
+            <input type="text" name="Nome" id="nome" placeholder="Nome: "> <br>
+            <input type="tel" name="telefone" id="tel" placeholder="Telefone:"> <br>
+            <div id="container">
+                <div id="serie">
+                    <label for="serie">Serie:</label>
+                        <select name="" id="">
+                            <option value="6">6°</option>
+                            <option value="7">7°</option>
+                            <option value="8">8°</option>
+                            <option value="9">9°</option>
+                            <option value="1">1°</option>
+                            <option value="2">2°</option>
+                            <option value="3">3°</option>
+                        </select> <br>
+                </div>
+                 <div id="apresentacao">
+                     <label>Apresentação:</label> <br>
+                
+                    <input type="radio" name="apresentacao" value="canto" id="canto">
+                    <label for="canto">Canto</label> <br>
+
+                    <input type="radio" name="apresentacao" value="danca" id="danca">
+                    <label for="danca">Dança</label> <br>
+
+                    <input type="radio" name="apresentacao" value="instrumento" id="instrumento">
+                    <label for="instrumento">Tocar Instrumento</label> <br>
+
+                    <input type="radio" name="apresentacao" value="outro" id="outroRadio">
+                    <label for="outroRadio">Outro</label><br>
+                
+                 </div>
+            </div>
+
+            
+            <div id="musica">
+                <input type="text" id="musicaInput" placeholder="Nome da música">
+            </div>
+
+            <div id="outro">
+            <input type="text" id="outroInput" placeholder="Qual é sua apresentação">
+            </div>
+
+
+            <label for="numero">Numero de participantes</label>
+                <input type="number" id="numero"> <br>
+            <div id="nomepartipantes">
+                <label for="nomepartipantes">Nome dos participantes</label>
+                <input type="text">
+            </div>
+
+            <button id="enviar">Enviar</button>
+        </form>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
