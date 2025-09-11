@@ -3,65 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styleinsc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Inscrição</title>
 </head>
 <body>
-    <h1>Inscrição</h1>
-    <div id="Form">
-        <form action="" method="post">
-            <input type="text" name="Nome" id="nome" placeholder="Nome: "> <br>
-            <input type="tel" name="telefone" id="tel" placeholder="Telefone:"> <br>
-            <div id="container">
-                <div id="serie">
-                    <label for="serie">Serie:</label>
-                        <select name="" id="">
-                            <option value="6">6°</option>
-                            <option value="7">7°</option>
-                            <option value="8">8°</option>
-                            <option value="9">9°</option>
-                            <option value="1">1°</option>
-                            <option value="2">2°</option>
-                            <option value="3">3°</option>
-                        </select> <br>
+    <div class="cabecalho">
+        <h1>Inscrição</h1>
+        <a href="index.html">&#11013 Voltar</a>
+    </div>
+    <div class="info">
+        <div id="Form">
+            <form method="post" action="" name="formulario-contato">
+
+                <label for="nome" class="desc">Nome: </label>
+                <input type="text" name="nome" id="nome" required> <br>
+
+
+                <label for="telefone" class="desc">Telefone: </label>
+                <input type="tel" name="telefone" id="tel" required> <br>
+
+
+                <div id="container">
+
+                    <div id="serie-container">
+                        <label for="serie">Serie:</label>
+                            <select name="serie" id="serie" required>
+                                <option value="6">6°</option>
+                                <option value="7">7°</option>
+                                <option value="8">8°</option>
+                                <option value="9">9°</option>
+                                <option value="1">1°</option>
+                                <option value="2">2°</option>
+                                <option value="3">3°</option>
+                            </select> <br>
+                    </div>
+                
+
+                     <div id="apresentacao">
+                         <label>Apresentação:</label> <br>
+        
+                        <input type="radio" name="apresentacao" value="canto" id="canto">
+                        <label for="canto">Canto</label> <br>
+                        <input type="radio" name="apresentacao" value="danca" id="danca">
+                        <label for="danca">Dança</label> <br>
+                        <input type="radio" name="apresentacao" value="instrumento" id="instrumento">
+                        <label for="instrumento">Tocar Instrumento</label> <br>
+                        <input type="radio" name="apresentacao" value="outro" id="outroRadio">
+                        <label for="outroRadio">Outro</label><br>
+        
+                     </div>
+
                 </div>
-                 <div id="apresentacao">
-                     <label>Apresentação:</label> <br>
-                
-                    <input type="radio" name="apresentacao" value="canto" id="canto">
-                    <label for="canto">Canto</label> <br>
 
-                    <input type="radio" name="apresentacao" value="danca" id="danca">
-                    <label for="danca">Dança</label> <br>
+        
+                <div id="musica">
+                    <label for="Nome_Musica" class="desc">Qual sua Musica?: </label>
+                    <input type="text" id="musicaInput" name="Nome_Musica">
+                </div>
+                <div id="outro">
+                    <label for="outra_apresentacao" class="desc">Qual outra apresentação?: </label>
+                    <input type="text" id="outroInput" name="outra_apresentacao">
+                </div>
 
-                    <input type="radio" name="apresentacao" value="instrumento" id="instrumento">
-                    <label for="instrumento">Tocar Instrumento</label> <br>
-
-                    <input type="radio" name="apresentacao" value="outro" id="outroRadio">
-                    <label for="outroRadio">Outro</label><br>
-                
-                 </div>
-            </div>
-
-            
-            <div id="musica">
-                <input type="text" id="musicaInput" placeholder="Nome da música">
-            </div>
-
-            <div id="outro">
-            <input type="text" id="outroInput" placeholder="Qual é sua apresentação">
-            </div>
+                <input type="checkbox" name="check" id="participantes">
+                <label for="check" class="desc" id="check">Apresentação de Turma</label>
+                <br>
+                <label for="numero_de_partipantes" class="desc">Numero de participantes</label>
+                <input type="number" id="numero" name="numero_de_partipantes" required> <br>
 
 
-            <label for="numero">Numero de participantes</label>
-                <input type="number" id="numero"> <br>
-            <div id="nomepartipantes">
-                <label for="nomepartipantes">Nome dos participantes</label>
-                <input type="text">
-            </div>
+                <div id="nomepartipantes">
+                    <label for="nomepartipantes" class="desc">Nome dos participantes</label> <br>
+                    <input type="text" id="nomepartipantesInput" name="nomepartipantes">
+                </div>
 
-            <button id="enviar">Enviar</button>
-        </form>
+
+                <input type="submit" value="Enviar" id="enviar">
+
+                <p></p>
+            </form>
+        </div>
+    </div>
+    <div class="rodape">
+        <p>Sarau 2° Serie</p>
     </div>
     
 </body>

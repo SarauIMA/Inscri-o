@@ -1,26 +1,47 @@
 body{
     margin: 0px;
     padding: 0px;
+    color: rgb(255, 255, 255);
 }
-
-.oxi{
-    background-color: black;
+.image{
+    background-image: url(sarau.jpeg);
     width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-h1{
-    color: white;
-    text-align: center;
+.line{
+    height: 1px;
+    background-color: rgb(255, 255, 255);
     margin: 0px;
 }
-
 .gil{
-    color: white;
+    margin: 0px;
+    background-color: black;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    padding: 10px;
 }
-
-div > h2{
-    flex: 1;
+.gil > a{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: rgb(214, 175, 1);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.principal{
+    background-color: rgb(0, 0, 0);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
 }

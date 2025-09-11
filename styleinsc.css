@@ -1,30 +1,87 @@
+.jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 body{
     margin: 0px;
-
+    background-color: rgb(78, 78, 78);
+    font-family: Jura, sans-serif;
+    color: rgb(255, 255, 255); /* trocado de preto para branco */
 }
-h1{
-    background-color: lightblue;
+input:focus{
+    outline: none;
+    color: rgb(255, 255, 255); /* trocado de preto para branco */
+}
+input{
+    color: rgb(255, 255, 255); /* trocado de preto para branco */
+}
+.cabecalho{
+    background-color: black;
+    color:  rgb(214, 175, 1);
     margin: 0px;
     padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.cabecalho a{
+    text-decoration: none;
+    color:  rgb(214, 175, 1);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+h1{
     font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
-
+.info{
+    background-color: rgb(0, 0, 0); /* trocado de branco para preto */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
 #apresentacao{
     padding-left: 30px;
 }
-#serie{
-    
+#nomepartipantesInput{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-/* Adicione ao seu CSS */
 #container {
+    font-size: 13px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha os itens ao início da linha */
+}
+#serie{
+    
+    padding-right: 20px;
 }
 #nome{
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
     height: 25px;
     padding-left: 10px;
     margin-top: 10px;
@@ -34,7 +91,9 @@ h1{
     margin-right: auto;
 }
 #tel{
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
     height: 25px;
     padding-left: 10px;
     margin-top: 10px;
@@ -43,18 +102,30 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
-
-.serie{
-    display: none;
+#numero{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
+    height: 25px;
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.desc{
+    padding-left: 25px;
+    font-size: 13px;
+    color: rgb(255, 255, 255); /* trocado de preto para branco */
 }
 #nomepartipantes{
     display: none;
 }
-#musica{
-    display: none;
-}
 #musicaInput{
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
     height: 25px;
     padding-left: 10px;
     margin-top: 10px;
@@ -67,7 +138,9 @@ h1{
     display: none;
 }
 #outroInput{
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255); /* trocado de preto para branco */
+    background-color: rgb(0, 0, 0) ; /* trocado de branco para preto */
     height: 25px;
     padding-left: 10px;
     margin-top: 10px;
@@ -76,11 +149,87 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
+#participantes{
+    margin: 20px;
+    margin-left: 25px;
+}
+#check{
+    padding-left: 0px;
+}
 #enviar{
+    cursor: pointer;
+    color: rgb(255, 255, 255); /* trocado de preto para branco */
+    border-radius: 30px;
     margin-top: 20px;
     width: 50%;
+    height: 40px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    }
+    border: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(214, 175, 1);}
+.rodape{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(214, 175, 1);
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.line{
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+#des{
+    color: rgb(255, 255, 255);
+}
+/* From Uiverse.io by csemszepp */ 
+.custum-file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #e8e8e8;
+  background-color: #212121;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px #e8e8e8;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
 }

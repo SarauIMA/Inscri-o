@@ -1,0 +1,72 @@
+.jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: white;
+}
+body{
+    background-color: rgb(78, 78, 78);
+    margin: 0px;
+    font-family: "Jura", sans-serif;
+}
+.cabecalho{
+    font-size: 30px;
+    text-align: center;
+    background-color: black;
+    color:  rgb(214, 175, 1);
+    margin: 0px;
+    padding: 20px;
+    font-family: "Jura", sans-serif;
+}
+.voltar{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jura", sans-serif;
+    display: block;
+    text-align: left;
+    color: rgb(214, 175, 1);
+}
+.line{
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+p{
+    margin: 0px;
+}
+.info{
+    background-color: black;
+    color: white;
+    padding: 10px ;
+}
+.alert{
+    color: red;
+    font-size: 15px;
+}
+#musicas{
+    background-color: black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Jura", sans-serif;
+}
+li{
+    padding-top: 20px;
+    list-style-type: none;
+    font-size: 20px;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Jura", sans-serif;
+}
