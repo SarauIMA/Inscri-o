@@ -11,19 +11,83 @@
     <title>Inscrição</title>
 </head>
 <body>
+    <script type="module">
+        // Importações Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+        // Configuração do Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCuEpu6-I7c9PGSe-OOsNGcphrswVoNqjk",
+            authDomain: "sarau-bac13.firebaseapp.com",
+            projectId: "sarau-bac13",
+            storageBucket: "sarau-bac13.appspot.com",
+            messagingSenderId: "172569092550",
+            appId: "1:172569092550:web:f13377a51bbbda6be6d2c7",
+            measurementId: "G-NQSMZWL4P3"
+        };
+
+        // Inicialização
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // Captura do formulário
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Pegar valores
+            const nome = document.getElementById("nome").value;
+            const telefone = document.getElementById("tel").value;
+            const serie = document.getElementById("serie").value;
+            const apresentacao = document.querySelector("input[name='apresentacao']:checked")?.value || "";
+            const musica = document.getElementById("musicaInput").value;
+            const outraApresentacao = document.getElementById("outroInput").value;
+            const turma = document.getElementById("participantes").checked;
+            const numeroParticipantes = document.getElementById("numero").value;
+            const nomesParticipantes = document.getElementById("nomepartipantesInput").value;
+
+            try {
+                // Salvar no Firestore
+                await addDoc(collection(db, "inscricoes"), {
+                    nome,
+                    telefone,
+                    serie,
+                    apresentacao,
+                    musica,
+                    outraApresentacao,
+                    turma,
+                    numeroParticipantes,
+                    nomesParticipantes,
+                    criadoEm: new Date()
+                        });
+            window.location.href = "inscrito.html";
+
+            } catch (error) {
+                console.error("Erro ao enviar inscrição: ", error);
+                alert("Erro ao enviar, tente novamente.");
+            }
+
+        });
+    </script>
+
+
     <div class="cabecalho">
         <h1>Inscrição</h1>
         <a href="index.html">&#11013 Voltar</a>
     </div>
     <div class="info">
         <div id="Form">
-            <form method="post" action="" name="formulario-contato">
+            <form>
 
                 <label for="nome" class="desc">Nome: </label>
                 <input type="text" name="nome" id="nome" required> <br>
 
 
-                <label for="telefone" class="desc">Telefone: </label>
+                <label for="tel" class="desc">Telefone: </label>
                 <input type="tel" name="telefone" id="tel" required> <br>
 
 
@@ -69,7 +133,7 @@
                     <input type="text" id="outroInput" name="outra_apresentacao">
                 </div>
 
-                <input type="checkbox" name="check" id="participantes">
+                <input type="checkbox" name="chec" id="participantes">
                 <label for="check" class="desc" id="check">Apresentação de Turma</label>
                 <br>
                 <label for="numero_de_partipantes" class="desc">Numero de participantes</label>
@@ -82,9 +146,9 @@
                 </div>
 
 
-                <input type="submit" value="Enviar" id="enviar">
+                <button id="enviar">Enviar</button>
 
-                <p></p>
+                <p></p> 
             </form>
         </div>
     </div>

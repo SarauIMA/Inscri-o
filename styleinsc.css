@@ -157,7 +157,6 @@ h1{
     padding-left: 0px;
 }
 #enviar{
-    cursor: pointer;
     color: rgb(255, 255, 255); /* trocado de preto para branco */
     border-radius: 30px;
     margin-top: 20px;
@@ -170,17 +169,14 @@ h1{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(214, 175, 1);}
+
 .rodape{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    left: 0px;
-    bottom: 0px;
     background-color: rgb(214, 175, 1);
-    margin: 0px;
-    padding: 10px;
     text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
     margin-top: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .line{
     height: 1px;
@@ -189,47 +185,4 @@ h1{
 }
 #des{
     color: rgb(255, 255, 255);
-}
-/* From Uiverse.io by csemszepp */ 
-.custum-file-upload {
-  height: 200px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  gap: 20px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed #e8e8e8;
-  background-color: #212121;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0px 48px 35px -48px #e8e8e8;
-}
-
-.custum-file-upload .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.custum-file-upload .icon svg {
-  height: 80px;
-  fill: #e8e8e8;
-}
-
-.custum-file-upload .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.custum-file-upload .text span {
-  font-weight: 400;
-  color: #e8e8e8;
-}
-
-.custum-file-upload input {
-  display: none;
 }

@@ -1,12 +1,21 @@
+.jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 body{
     margin: 0px;
     padding: 0px;
+    background-color: rgb(78, 78, 78);
     color: rgb(255, 255, 255);
+    font-family: "Jura", sans-serif;
 }
 .image{
     background-image: url(sarau.jpeg);
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,4 +53,21 @@ body{
     padding-right: 10px;
     border-style: solid;
     border-width: 1px;
+}
+.rodape{
+    background-color: rgb(214, 175, 1);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    margin-top: 20px;
+}
+@media screen and (min-width: 1200px){ 
+    .image{
+        background-color: black;
+        height: 300px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

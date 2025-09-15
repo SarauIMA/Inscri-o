@@ -1,17 +1,31 @@
-const script_do_goole = 'https://script.google.com/macros/s/AKfycbw48EuS-cH7rlEIsZ-vOgh3G7M2cZmNkN9mJ0mKsMJFGN_H78sp0jFiZDviXY3bZeKSMA/exec'
-const dados_do_formulario = document.forms['formulario-contato'];
+ import { db } from "./firebase.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
-dados_do_formulario.addEventListener('submit', function (e) {
+const form = document.getElementById("formInscricao");
+
+// pegar música da URL se veio de musicas.html
+const parames = new URLSearchParams(window.location.search);
+const musicaURL = parames.get("Nome_Musica");
+if (musicaURL) document.getElementById("musicaInput").value = musicaURL;
+
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
+    const serie = document.getElementById("serie").value;
+    const musica = document.getElementById("musicaInput").value;
 
-    fetch(script_do_goole, { method: 'POST', body: new FormData(dados_do_formulario) })
-    .then(response => {
-        alert('Formulário enviado com sucesso!', response);
-        dados_do_formulario.reset();
-    })
-    .catch(error => 
-        alert('Erro ao enviar o formulário', error));
+    try {
+    await addDoc(collection(db, "inscricoes"), {
+        nome, telefone, serie, musica, criadoEm: new Date()
     });
+    alert("Inscrição realizada!");
+    window.location.href = "musicas.html";
+    } catch (err) {
+    alert("Erro ao salvar: " + err);
+    }
+});
+
 
 function mostrar(){
     let serie = document.getElementById("serie");
@@ -94,9 +108,8 @@ for (const radio of radios) {
 
 const params = new URLSearchParams(window.location.search);
 const musica = params.get("Nome_Musica");
-const cant = document.getElementById("cant")
+const cant = document.getElementById("canto")
 if (musica) {
 document.getElementById("musicaInput").value = musica;
-cant.checked = true;
-verificarSelecao();
+cant.checked()
 }

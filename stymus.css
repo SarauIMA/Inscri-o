@@ -70,3 +70,12 @@ a{
     font-size: 20px;
     font-family: "Jura", sans-serif;
 }
+
+.rodape{
+    background-color: rgb(214, 175, 1);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    margin-top: 20px;
+}
